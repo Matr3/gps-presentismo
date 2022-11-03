@@ -3,9 +3,38 @@
 
 }
 .views{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     height: 90vh;
     width:100%;
     background-color: blue;
 
+}
+.novedades-onLine{
+
+    height: 45vh;
+    width: 50%;
+    background-color: #220000;
+}
+.presentismo-coord{
+
+    height: 45vh;
+    width: 50%;
+    background-color: #79fc06;
+}
+.presentismo-vig{
+
+    height: 45vh;
+    width: 50%;
+    background-color: #fc8d06;
+}
+.marcaciones{
+
+    height: 45vh;
+    width: 50%;
+    background-color: #fc06b2;
+}
+.full_screen{
+    height: 90vh;
+    width: 100%;
 }
