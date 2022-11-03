@@ -1,0 +1,11 @@
+.cuerpo{
+    display: flex;
+
+}
+.views{
+    display: inline-block;
+    height: 90vh;
+    width:100%;
+    background-color: blue;
+
+}
