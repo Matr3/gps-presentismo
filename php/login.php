@@ -1,10 +1,5 @@
 <?php
-	$usuario = $_POST['user'];
-	$password = $_POST['pass'];
-    echo $usuario;
-	echo $password;
 
-    /*
 	require "databaseconnect.php";
 	
 	session_start();
@@ -30,7 +25,7 @@
 				$_SESSION['nombre'] = $row['nombre'];
 				$_SESSION['tipo_usuario'] = $row['tipo_usuario'];
 				
-				header("Location: principal.php");
+				header("Location: dashboard.html");
 				
 			} else {
 			
@@ -45,8 +40,4 @@
 		
 	}	
 		
-*/
-	
-	
-	
 ?>
