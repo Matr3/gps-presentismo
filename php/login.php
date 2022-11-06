@@ -7,10 +7,11 @@
     /*
 	require "databaseconnect.php";
 	
-
-
+	session_start();
+		$usuario = $_POST['user'];
+		$password = $_POST['pass'];
 		
-		
+		if($_POST){
 		
 		$sql = "SELECT id, password, nombre, tipo_usuario FROM usuarios WHERE usuario='$usuario'";
 		//echo $sql;
@@ -42,7 +43,7 @@
 			echo "NO existe usuario";
 		}
 		
-		
+	}	
 		
 */
 	
