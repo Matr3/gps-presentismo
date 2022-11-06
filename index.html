@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
+
 <body>
     <section class="form">
-        <H1>Login</H1> 
-            <form  action="">
-                <fieldset>
-                    <div>
-                        <label for="">Usuario</label>
-                        <input type="text" placeholder="Ingrese nombre de Usuario">
-                    </div>
-                    <div>
-                        <label for="">Password</label>
-                        <input type="password" name="" id="" placeholder="Ingrese su Contraseña">
-                    </div>
-                    <button type="submit" class="">Login</button>   
-                </fieldset>     
-            </form>
+        <H1>Login</H1>
+        <form action="#" id="login">
+            <fieldset>
+                <div>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="user" placeholder="Ingrese nombre de Usuario">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="pass" autocomplete="on"
+                        placeholder="Ingrese su Contraseña">
+                </div>
+                <button type="submit" class="">Login</button>
+            </fieldset>
+        </form>
     </section>
     <footer class="rodapie">
         <section class="rodapieInfo">
-            <p>Copyright © Your Website 2022</p> 
+            <p>Copyright © Your Website 2022</p>
             <p>Desarrollado por Tremari Marcelo</p>
-        </section>    
+        </section>
     </footer>
+    <script type="text/javascript" src="js/conexion_login.js"></script>
 </body>
+
 </html>
