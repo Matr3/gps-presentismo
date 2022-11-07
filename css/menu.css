@@ -1,0 +1,58 @@
+.modal-card{
+    width: 100%;
+}
+
+.casilla{
+    margin: 15px 0;
+}
+form {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+   }
+form .casilla {
+    display: block;
+    position: relative;
+    width: calc(80%);
+    height: auto;
+    margin: 10px auto;
+    padding: 30px 10px 10px;
+   }
+   
+   form .casilla input, .casilla select {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 10px;
+    font-size: 18px;
+    border: solid 1px black;
+   }
+   form .casilla textarea {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 10px;
+    font-size: 18px;
+    border: solid 1px black;
+   }
+   
+   form .casilla label {
+    display: block;
+    position: absolute;
+    width: auto;
+    top: 0px;
+    padding: 5px 5px;
+   }
+   .casillaChec{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px 0;
+   }
+   .form-input{
+    width: 100px !important;
+   }
