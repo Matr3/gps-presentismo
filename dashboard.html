@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/menu.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     <!--Modal Botones-->
     <script type="module" src="js/modalNovOnline.js"></script>
 
@@ -61,15 +62,15 @@
                                                     </div>
 
                                                     <div class="casilla">
-                                                        <label for="coord">Coordinador</label>
-                                                        <select name="coord">
+                                                        <label for="coord" >Coordinador</label>
+                                                        <select name="coord" id="SelectCoord">
                                                             <option value="0">Seleccione:</option>
                                                         </select>
                                                     </div>
 
                                                     <div class="casilla">
                                                         <label for="obj">Objetivo</label>
-                                                        <select name="obj">
+                                                        <select name="obj" id="SelectObj">
                                                             <option value="0">Seleccione:</option>
                                                         </select>
                                                     </div>
@@ -492,6 +493,7 @@
 
     <script src="js/deslizarmenu.js"></script>
     <script src="js/botonera.js"></script>
+    <script type="text/javascript" src="js/selectCoord.js"></script>
 </body>
 
 </html>

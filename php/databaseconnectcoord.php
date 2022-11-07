@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$database = "c2300479_gslogin";
-$username = "c2300479_gslogin";
+$database = "c2300479_coord";
+$username = "c2300479_coord";
 $password = "Rolling2020";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
