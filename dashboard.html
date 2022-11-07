@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
-    <!--Vue-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
+    <!--Modal Botones-->
+    <script type="module" src="js/modalNovOnline.js"></script>
 
 </head>
 
@@ -28,35 +29,388 @@
                 <section>
                     <ul>
                         <li class="bt-titulo">Planillas</li>
-                        <li id= "novedad" class="bt-menu submenu"><a href="#">Novedades OnLine</a></li>
-                        <li id= "presCoord" class="bt-menu submenu"><a href="#">Presentismo Coord.</a></li>
-                        <li id= "presVig" class="bt-menu submenu"><a href="#">Presentismo Vig.</a></li>
-                        <li id= "marca" class="bt-menu submenu"><a href="#">Marcaciones</a></li>
+                        <li id="novedad" class="bt-menu submenu"><a href="#">Novedades OnLine</a></li>
+                        <li id="presCoord" class="bt-menu submenu"><a href="#">Presentismo Coord.</a></li>
+                        <li id="presVig" class="bt-menu submenu"><a href="#">Presentismo Vig.</a></li>
+                        <li id="marca" class="bt-menu submenu"><a href="#">Marcaciones</a></li>
                     </ul>
                 </section>
                 <section>
                     <ul>
                         <li class="bt-titulo-1">Ingreso de datos</li>
-                        <li class="bt-menu submenu1"><a href="#">Novedades</a></li>
-                        <li class="bt-menu submenu1"><a href="#">Presentismo Coord.</a></li>
-                        <li class="bt-menu submenu1"><a href="#">Presentismo Vig.</a></li>
+                        <li class="submenu1">
+                            <button class="bt-menu btn-modal-open">Novedades</button>
+                            <div id="overlay">
+                                <div class="modal">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Novedades On line
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardar.php" method="POST">
+                                                <div class="form-group">
+                                                    <div class="casilla">
+                                                        <label for="fecha">Fecha</label>
+                                                        <input type="date" name="fecha" class="form-input" required />
+                                                    </div>
+
+                                                    <div class="casilla">
+                                                        <label for="hora">Hora</label>
+                                                        <input type="time" name="hora" class="form-input" required />
+                                                    </div>
+
+                                                    <div class="casilla">
+                                                        <label for="coord">Coordinador</label>
+                                                        <select name="coord">
+                                                            <option value="0">Seleccione:</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="casilla">
+                                                        <label for="obj">Objetivo</label>
+                                                        <select name="obj">
+                                                            <option value="0">Seleccione:</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="casilla">
+                                                        <label for="coord">Novedad</label>
+                                                        <textarea type="text" name="nov" rows="6" col="250"
+                                                            placeholder="Escriba Novedad"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <input class="form-btn" name="submit" type="submit" value="Guardar" />
+
+                                            </form>
+
+                                        </div>
+                                        <button class="bt-menu btn-modal-close">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu1">
+                            <button class="bt-menu btn-modal-open-1">Presentismo Coord.</button>
+                            <div id="overlay1">
+                                <div class="modal1">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Recorrida de Coordinador
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarPC.php" method="POST">
+                                                <div class="form-group">
+                                                    <div class="casilla">
+                                                        <label for="fecha">Fecha</label>
+                                                        <input type="date" name="fecha" class="form-input" required />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="casilla">
+                                                        <label for="hora">Hora</label>
+                                                        <input type="time" name="hora" class="form-input" required />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="casilla">
+                                                        <label for="coord">Coordinador</label>
+                                                        <select name="coord">
+                                                            <option value="0">Seleccione:</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="casilla">
+                                                        <label for="obj">Objetivo</label>
+                                                        <select name="obj">
+                                                            <option value="0">Seleccione:</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <input class="form-btn" name="submit" type="submit" value="Guardar" />
+
+                                            </form>
+
+                                        </div>
+                                        <button class="bt-menu btn-modal-close1">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu1">
+                            <button class="bt-menu btn-modal-open-2">Presentismo Vig.</button>
+                            <div id="overlay2">
+                                <div class="modal2">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Presentismo Vig.
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarPV.php" method="POST">
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="fecha">Fecha</label>
+                                                <input type="date" name="fecha" class="form-input" required/>  
+                                                </div></div>
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="hora">Hora</label>
+                                                <input type="time" name="hora" class="form-input" required/> 
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="coord">Coordinador</label>
+                                                <select name="coord">
+                                                       <option value="0">Seleccione:</option>
+                                                </select>
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="obj">Objetivo</label>
+                                                <select name="obj">
+                                                       <option value="0">Seleccione:</option>
+                                                </select>
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="vig">Presentismo del Vig.</label>
+                                                <textarea type="text" name="vig" rows="6" col="250" placeholder="Escriba Apellido y nombre de los Vigiladores." style="width: 100%"></textarea>
+                                                </div> </div>     
+
+                                    <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                    
+                                    </form>
+
+                                        </div>
+                                        <button class="bt-menu btn-modal-close2">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </section>
                 <section>
                     <ul>
                         <li class="bt-titulo-2">Modificar datos</li>
-                        <li class="bt-menu submenu2"><a href="#">Agregar Coord.</a></li>
-                        <li class="bt-menu submenu2"><a href="#">Agregar Obj.</a></li>
-                        <li class="bt-menu submenu2"><a href="#">Modificar Obj. con Coord.</a></li>
-                        <li class="bt-menu submenu2"><a href="#">Turnos de Obj.</a></li>
-                        <li class="bt-menu submenu2"><a href="#">Crear Limites del Obj.</a></li>
+                        <li class="submenu2">
+                            <button class="bt-menu btn-modal-open-3">Agregar Coord.</button>
+                            <div id="overlay3">
+                                <div class="modal3">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Agregar Coordinador
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarCoord.php" method="POST">
+                                                 <div class="form-group"><div class="casilla">
+                                                <label for="coord">Coordinador Nuevo</label>
+                                                <textarea type="text" name="coord" rows="6" col="250" placeholder="Escriba Coordinador."></textarea>
+                                                </div> </div>
+                                                    
+
+                                    <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                    </form>
+
+                                        </div>
+                                        <button class="bt-menu btn-modal-close3">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu2">
+                            <button class="bt-menu btn-modal-open-4">Agregar Obj.</button>
+                            <div id="overlay4">
+                                <div class="modal4">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Agregar Objetivos
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarObj.php" method="POST">
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="coord">Coordinador</label>
+                                                <select name="coord">
+                                                       <option value="0">Seleccione:</option>
+                                                </select>
+                                                </div></div> 
+                                                 <div class="form-group"><div class="casilla">
+                                                <label for="obj">Objetivo Nuevo</label>
+                                                <textarea type="text" name="obj" rows="6" col="250" placeholder="Escriba el Nombre del Objetivo."></textarea>
+                                                </div> </div>     
+
+                                    <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                    </form>
+                                        </div>
+                                        <button class="bt-menu btn-modal-close4">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu2">
+                            <button class="bt-menu btn-modal-open-5">Modificar Obj. con Coord.</button>
+                            <div id="overlay5">
+                                <div class="modal5">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Modificar Obj. con Coord.
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarCO.php" method="POST">
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="coord">Coordinador</label>
+                                                <select name="coord">
+                                                       <option value="0">Seleccione:</option>
+                                                </select>
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="obj">Objetivo</label>
+                                                <select name="obj">
+                                                       <option value="0">Seleccione:</option>
+                                                </select>
+                                                </div></div>
+                                                <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                    </form>
+                                        </div>
+                                        <button class="bt-menu btn-modal-close5">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu2">
+                            <button class="bt-menu btn-modal-open-6">Turno de Obj.</button>
+                            <div id="overlay6">
+                                <div class="modal6">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Turnos de Objetivo
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarHO1.php" method="POST">
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="servicio_name">Objetivo</label>
+                                                                           <select name="servicio_name">
+                                                                           </select>
+                                                                           </div></div>
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="L"> Lu <input type="checkbox" name="L[]" value="L" /></label>
+                                                                           <label for="L1"> T1 </label>
+                                                                           <input type="time" name="L1" class="form-input"/>
+                                                                           <label for="L2"> T2 </label>
+                                                                           <input type="time" name="L2" class="form-input"/>
+                                                                           <label for="L3"> T3 </label>
+                                                                           <input type="time" name="L3" class="form-input"/> 
+                                                                           </div></div>
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="M"> Ma <input type="checkbox" name="M[]" value="M" /></label>
+                                                                           <label for="M1"> T1 </label>
+                                                                           <input type="time" name="M1" class="form-input"/>
+                                                                           <label for="M2"> T2 </label>
+                                                                           <input type="time" name="M2" class="form-input"/>
+                                                                           <label for="M3"> T3 </label>
+                                                                           <input type="time" name="M3" class="form-input"/> 
+                                                                           </div></div>   
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="X"> Mi <input type="checkbox" name="X[]" value="X" /></label>
+                                                                           <label for="X1"> T1 </label>
+                                                                           <input type="time" name="X1" class="form-input"/>
+                                                                           <label for="X2"> T2 </label>
+                                                                           <input type="time" name="X2" class="form-input"/>
+                                                                           <label for="X3"> T3 </label>
+                                                                           <input type="time" name="X3" class="form-input"/> 
+                                                                           </div></div>
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="J"> Ju <input type="checkbox" name="J[]" value="J" /></label>
+                                                                           <label for="J1"> T1 </label>
+                                                                           <input type="time" name="J1" class="form-input"/>
+                                                                           <label for="J2"> T2 </label>
+                                                                           <input type="time" name="J2" class="form-input"/>
+                                                                           <label for="J3"> T3 </label>
+                                                                           <input type="time" name="J3" class="form-input"/> 
+                                                                           </div></div>                                                            
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="V"> Vi <input type="checkbox" name="V[]" value="V" /></label>
+                                                                           <label for="V1"> T1 </label>
+                                                                           <input type="time" name="V1" class="form-input"/>
+                                                                           <label for="V2"> T2 </label>
+                                                                           <input type="time" name="V2" class="form-input"/>
+                                                                           <label for="V3"> T3 </label>
+                                                                           <input type="time" name="V3" class="form-input"/> 
+                                                                           </div></div>
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="S"> Sa <input type="checkbox" name="S[]" value="S" /></label>
+                                                                           <label for="S1"> T1 </label>
+                                                                           <input type="time" name="S1" class="form-input"/>
+                                                                           <label for="S2"> T2 </label>
+                                                                           <input type="time" name="S2" class="form-input"/>
+                                                                           <label for="S3"> T3 </label>
+                                                                           <input type="time" name="S3" class="form-input"/> 
+                                                                           </div></div>
+                                                                           <div class="form-group"><div class="casilla">
+                                                                           <label for="D"> Do <input type="checkbox" name="D[]" value="D" /></label>
+                                                                           <label for="D1"> T1 </label>
+                                                                           <input type="time" name="D1" class="form-input"/>
+                                                                           <label for="D2"> T2 </label>
+                                                                           <input type="time" name="D2" class="form-input"/>
+                                                                           <label for="D3"> T3 </label>
+                                                                           <input type="time" name="D3" class="form-input"/> 
+                                                                           </div></div>
+                                                                               
+
+                                                               <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                                               </form>
+                                        </div>
+                                        <button class="bt-menu btn-modal-close6">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="submenu2">
+                            <button class="bt-menu btn-modal-open-7">Crear Limites del Obj.</button>
+                            <div id="overlay7">
+                                <div class="modal7">
+                                    <div class="modal-card">
+                                        <h1 class="modal-title">
+                                            Crear Geocerca
+                                        </h1>
+                                        <div class="modal-content">
+                                            <form action="logica/guardarGD.php" method="POST">
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="nombreCliente">Nombre del Objetivo</label>
+                                                <input type="text" name="nombreCliente" class="form-input" required/>  
+                                                </div></div>
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="direccionCliente">Direccion del Objetivo</label>
+                                                <input type="text" name="direccionCliente" class="form-input" required/> 
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="latCliente">Latitud:</label>
+                                                <input type="text" name="latCliente" class="form-input" required/> 
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="lngCliente">Longitud:</label>
+                                                <input type="text" name="lngCliente" class="form-input" required/> 
+                                                </div></div> 
+                                                <div class="form-group"><div class="casilla">
+                                                <label for="dist">Geocerca</label>
+                                                <input type="text" name="dist" class="form-input" required/> 
+                                                </div></div>     
+
+                                    <input class="form-btn" name="submit" type="submit" value="Guardar" />
+                                    </form>
+                                        </div>
+                                        <button class="bt-menu btn-modal-close7">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </section>
             </nav>
         </section>
         <section class="views">
             <article class="novedades-onLine">
-                <iframe width="100%" height="100%" src="https://geosolc.com.ar/consulta_novedades.php" allowfullscreen=""></iframe>
+                <iframe width="100%" height="100%" src="https://geosolc.com.ar/consulta_novedades.php"
+                    allowfullscreen=""></iframe>
             </article>
             <article class="presentismo-coord">
 
