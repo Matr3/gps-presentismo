@@ -20,13 +20,13 @@
 			$pass_c = sha1($password);
 			
 			if($password_bd == $pass_c){
-				/*
+				
 				$_SESSION['id'] = $row['id'];
 				$_SESSION['nombre'] = $row['nombre'];
 				$_SESSION['tipo_usuario'] = $row['tipo_usuario'];
-				*/
-				ob_start();
-				header("Location:../dashboard.html?user=$usuario");
+				
+				
+				header("Location:../dashboard.html");
 				mysqli_close($conn);
 			} else {
 			

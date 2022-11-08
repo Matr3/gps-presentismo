@@ -126,6 +126,20 @@ h1{
     color: #ffffff;
     border: none;
 }
+.bt-close{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #161616;
+    padding: 10px 0 10px 15px;
+    color: #ffffff;
+    border: none;
+}
+.bt-close:hover{
+    background: #000000;
+}
 .bt-menu a, .bt-menu-t1 a, .bt-menu-t2 a{
     color: #ffffff;
     text-decoration: none;

@@ -10,7 +10,10 @@ $(document).ready(function() {
                       },
                 url: 'php/login.php',
                 success: function(data) {
-                    console.log(data)
+                    //console.log(data)
+                    if(data){
+                        window.location.replace("../dashboard.html");
+                      }
                 }
             })
         })
