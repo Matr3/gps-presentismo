@@ -26,8 +26,8 @@
 				$_SESSION['tipo_usuario'] = $row['tipo_usuario'];
 				
 				
-				header("Location:../dashboard.html");
-				mysqli_close($conn);
+				echo 'True';
+				
 			} else {
 			
 			echo "La contraseña no coincide";

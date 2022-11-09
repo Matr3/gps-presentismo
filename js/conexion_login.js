@@ -1,19 +1,22 @@
 $(document).ready(function() {
     $('#login').on('submit', function(e) {
         e.preventDefault();
+        const usuario = $('#user').val();
+        const password = $('#pass').val();
             $.ajax({
                 type: 'POST',
-                dataType: "html",
+                dataType: 'html',
                 data: { 
-                    user: $('#user').val(),
-                    pass: $('#pass').val()
+                    user: usuario,
+                    pass: password
                       },
                 url: 'php/login.php',
                 success: function(data) {
-                    //console.log(data)
-                    if(data){
-                        window.location.replace("../dashboard.html");
-                      }
+                    if(data == 'True'){
+                       window.location.replace('./dashboard.html?user='+usuario);
+                    }else{
+                        console.log(data)
+                    }
                 }
             })
         })

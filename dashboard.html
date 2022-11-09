@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/menu.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/selectores.js"></script>
+    
     <!--Modal Botones-->
     <script type="module" src="js/modalNovOnline.js"></script>
+
+    
 
 </head>
 
@@ -49,7 +53,7 @@
                                             Novedades On line
                                         </h1>
                                         <div class="modal-content">
-                                            <form action="php/logica/guardarNov.php" method="POST">
+                                            <form action="#" method="POST">
                                                 <div class="form-group">
                                                     <div class="casilla">
                                                         <label for="fecha">Fecha</label>
@@ -64,7 +68,7 @@
                                                     <div class="casilla">
                                                         <label for="coord" >Coordinador</label>
                                                         <select name="coord" id="SelectCoord">
-                                                            <option value="0">Seleccione:</option>
+                                                            <option value="0">Escoga un Coordinador</option>
                                                         </select>
                                                     </div>
 
@@ -101,7 +105,7 @@
                                             Recorrida de Coordinador
                                         </h1>
                                         <div class="modal-content">
-                                            <form action="logica/guardarPC.php" method="POST">
+                                            <form action="#" method="POST">
                                                 <div class="form-group">
                                                     <div class="casilla">
                                                         <label for="fecha">Fecha</label>
@@ -496,8 +500,6 @@
 
     <script src="js/deslizarmenu.js"></script>
     <script src="js/botonera.js"></script>
-    <script type="text/javascript" src="js/selectCoord.js"></script>
-    <script type="text/javascript" src="js/selectObj.js"></script>
 </body>
 
 </html>
